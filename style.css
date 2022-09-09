@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.header {
+  background: #2b2b2a;
+  padding: 40px 0 32px;
+}
+
+.header .header__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header .header__flex ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header__flex ul li {
+  list-style: none;
+  padding: 15px 20px;
+  border-right: 1px solid #ffffff;
+}
+
+.header .header__flex ul li:last-child {
+  border-right: none;
+}
+
+.header .header__flex ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0 20px;
+}
+
+.information {
+  position: relative;
+  height: 702px;
+}
+
+.information img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.information .information__text {
+  margin-top: 160px;
+  height: 100%;
+  padding-left: 90px;
+}
+
+@media (max-width: 1400px) {
+  .information .information__text {
+    margin-top: 55px;
+  }
+}
+
+.information .information__text h3 {
+  font-size: 69px;
+  font-weight: 700;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+.information .information__text button {
+  margin-top: 42px;
+  padding: 7px 42px;
+  border: none;
+  background: #c52573;
+  color: #ffffff;
+  border-bottom: 2px dashed #ffffff;
+}
+
+.products {
+  background: #c52573;
+  border-top: 4px dashed #ffffff;
+  border-bottom: 4px dashed #ffffff;
+}
+
+.products .card {
+  border: none;
+  position: relative;
+  background: #c52573;
+  padding: 28px 26px;
+  height: 100%;
+}
+.products .card__first:after {
+  content: "";
+  width: 1px;
+  height: 92%;
+  border-left: 2px solid #ffffff;
+  position: absolute;
+  top: 0;
+  right: -12px;
+  margin: 20px 0;
+}
+
+.products .card__second:after {
+  content: "";
+  width: 1px;
+  height: 92%;
+  border-left: 2px solid #ffffff;
+  position: absolute;
+  top: 0;
+  right: -12px;
+  margin: 20px 0;
+}
+
+.products .card .card__flex {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 85px;
+}
+
+.products .card .card__flex h2 {
+  font-size: 20px;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 50%;
+  background: #2b2b2a;
+  text-transform: uppercase;
+}
+.products .card .card__flex h3 {
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 30px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.products .card .card__flex h3 span {
+  font-weight: 700;
+}
+
+.products .card .card__count {
+  position: absolute;
+  top: 100px;
+  left: -12px;
+  padding: 15px 15px 15px 120px;
+  background: #2b2b2a;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.products .card .card__count h4 {
+  color: #ffffff;
+}
+
+.products .card h6 {
+  font-size: 24px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.products .card .card__description {
+  padding: 20px 0;
+  position: relative;
+}
+
+.products .card__first .card__description::before {
+  content: "";
+  width: 107%;
+  height: 1px;
+  border-top: 2px solid #ffffff;
+  position: absolute;
+  top: 8px;
+  right: -38px;
+}
+.products .card__second .card__description::before {
+  content: "";
+  width: 137%;
+  height: 1px;
+  border-top: 2px solid #ffffff;
+  position: absolute;
+  top: 8px;
+  left: -38px;
+}
+.products .card__third .card__description::before {
+  content: "";
+  width: 107%;
+  height: 1px;
+  border-top: 2px solid #ffffff;
+  position: absolute;
+  top: 8px;
+  left: -38px;
+}
+
+.products .card .card__description {
+  height: 208px;
+}
+
+.products .card .card__description p {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.products .card .card__photo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.products .card__first .card__photo::before {
+  content: "";
+  width: 107%;
+  height: 1px;
+  border-top: 2px solid #ffffff;
+  position: absolute;
+  top: 0;
+  right: -38px;
+}
+
+.products .card__second .card__photo::before {
+  content: "";
+  width: 137%;
+  height: 1px;
+  border-top: 2px solid #ffffff;
+  position: absolute;
+  top: 0;
+  left: -38px;
+}
+
+.products .card__third .card__photo::before {
+  content: "";
+  width: 107%;
+  height: 1px;
+  border-top: 2px solid #ffffff;
+  position: absolute;
+  top: 0;
+  left: -38px;
+}
+
+.products .card .card__photo .card__photo-column .img_1 {
+  width: 110px;
+  height: 145px;
+  margin-bottom: -22px;
+}
+
+.products .card .card__photo .card__photo-column .img_2 {
+  width: 110px;
+  height: auto;
+}
+
+.products .card button {
+  width: 220px;
+  font-size: 16px;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  margin-left: 60%;
+  background: #2b2b2a;
+  color: #ffffff;
+  font-weight: 400;
+  border: none;
+  border-bottom: 2px dashed #c52573;
+}
+
+@media (max-width: 1500px) {
+  .products .card button {
+    margin-top: 20px;
+    margin-left: 45%;
+  }
+}
+
+.sentence {
+  position: relative;
+  background: #e5e5e5;
+  padding: 30px 28px;
+}
+
+.sentence img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.sentence h3 {
+  margin-bottom: 20px;
+}
+
+.sentence .sentence__row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.sentence .sentence__row::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-top: 2px solid #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sentence .sentence__row .sentence__text-1 {
+  padding: 15px 15px 15px 0;
+  border-bottom: 2px solid #2b2b2a;
+  border-right: 2px solid #2b2b2a;
+}
+
+.sentence .sentence__row .sentence__text-2 {
+  padding: 15px 15px 15px 15px;
+  border-bottom: 2px solid #2b2b2a;
+}
+
+.sentence .sentence__form {
+  width: 377px;
+  padding: 15px 15px 15px 0;
+  border-right: 2px solid #2b2b2a;
+}
+
+.sentence .sentence__form .input-group span {
+  background: #ededed;
+  border-radius: 0;
+}
+
+.sentence .sentence__form .input-group img {
+  position: relative;
+}
+
+.sentence .sentence__form .input-group .form-control {
+  background: #ededed;
+  border-radius: 0;
+}
+
+.sentence .sentence__form .form-check .form-check-input:checked {
+  background-color: #adb5bd;
+  border-color: #adb5bd;
+}
+
+.sentence .sentence__form .form-check label {
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+.sentence .sentence__form .form-check-input {
+  width: 22px;
+  height: 22px;
+}
+
+.sentence button {
+  margin-top: 42px;
+  padding: 7px 42px;
+  border: none;
+  background: #c52573;
+  color: #ffffff;
+  border-bottom: 2px dashed #ffffff;
+  margin: 0 0 20px 150px;
+}
+
+.feedback {
+  background: #2b2b2a;
+}
+
+.feedback .feedback__flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.feedback .feedback__flex .feedback__flex {
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+.feedback .feedback__flex img {
+  width: 444px;
+  height: 100%;
+}
+
+.feedback .feedback__flex .feedback__text h3 {
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.feedback .feedback__flex .feedback__text p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 15px;
+}
+
+.feedback .feedback__flex .feedback__flex .feedback__text-1 {
+  border-right: 2px solid #ffffff;
+}
+.feedback .feedback__flex .feedback__flex .feedback__text-2 {
+  border-right: 2px solid #ffffff;
+}
+
+.feedback .feedback__text .feedback__form img {
+  width: 10px;
+  height: 10px;
+}
+
+.feedback .feedback__text .feedback__form {
+  width: 360px;
+  padding: 15px 0 15px 15px;
+  border-right: 2px solid #2b2b2a;
+}
+
+.feedback .feedback__text .feedback__form .input-group span {
+  background: #ededed;
+  border-radius: 0;
+}
+
+.feedback .feedback__text .feedback__form .input-group img {
+  position: relative;
+}
+
+.feedback .feedback__text .feedback__form .input-group .form-control {
+  background: #ededed;
+  border-radius: 0;
+}
+
+.feedback
+  .feedback__text
+  .feedback__form
+  .form-check
+  .form-check-input:checked {
+  background-color: #adb5bd;
+  border-color: #adb5bd;
+}
+
+.feedback .feedback__text .feedback__form .form-check label {
+  line-height: 20px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.feedback .feedback__text .feedback__form .form-check-input {
+  width: 22px;
+  height: 22px;
+}
+
+.feedback button {
+  margin-top: 42px;
+  padding: 7px 42px;
+  border: none;
+  background: #c52573;
+  color: #ffffff;
+  border-bottom: 2px dashed #ffffff;
+  margin: 0 0 20px 150px;
+}
+
+.contact {
+  background: #2b2b2a;
+}
+
+.contact .form__contact {
+  padding: 40px 10px;
+  position: relative;
+}
+
+.contact .form__contact h4 {
+  font-size: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact .form__contact .contact__flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  margin-bottom: 10px;
+}
+
+.contact .form__contact .contact__flex img {
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  padding-left: 0;
+}
+
+.contact .form__contact .contact__flex p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.contact img {
+  width: 100%;
+  height: auto;
+  padding-left: 44px;
+}
+
+.footer {
+  background: #2b2b2a;
+  padding: 20px 0;
+}
+
+.footer h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-end;
+  color: #ffffff;
+}
+
+.footer h4 img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
